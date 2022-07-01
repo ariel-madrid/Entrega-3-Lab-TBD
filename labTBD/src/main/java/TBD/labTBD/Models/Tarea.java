@@ -1,9 +1,13 @@
 package TBD.labTBD.Models;
 
 import java.sql.Date;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 
+@Document(collection = "Tarea")
 public class Tarea {
     private int id;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
