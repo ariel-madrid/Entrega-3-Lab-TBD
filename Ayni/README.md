@@ -1,4 +1,4 @@
-# Ayni
+# ayni
 
 ## Build Setup
 
