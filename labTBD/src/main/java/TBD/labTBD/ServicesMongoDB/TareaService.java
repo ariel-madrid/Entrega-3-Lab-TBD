@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
-public class TareaService
- {
+public class TareaService {
     private final TareaRepository repositorieTarea;
 
     public TareaService(TareaRepository repositorieTarea) {
@@ -47,7 +46,8 @@ public class TareaService
     // Metodo eliminar
     @DeleteMapping(value = "/tarea/eliminarMongoDB/{id}")
     public void eliminar(@PathVariable(value = "id") int id) {
-        repositorieTarea.deleteById(id);;
+        repositorieTarea.deleteById(id);
+        ;
     }
 
 }
