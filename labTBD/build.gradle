@@ -21,6 +21,7 @@ dependencies {
 	implementation group: 'org.sql2o', name: 'sql2o', version: '1.6.0'
 	implementation 'org.postgresql:postgresql:42.2.5'
 	implementation group: 'net.postgis', name: 'postgis-jdbc', version: '2.5.0'
+	implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.11'
 }
 
 tasks.named('test') {

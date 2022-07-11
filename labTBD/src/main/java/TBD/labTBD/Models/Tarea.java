@@ -2,6 +2,7 @@ package TBD.labTBD.Models;
 
 import java.sql.Date;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -9,13 +10,14 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Document(collection = "Tarea")
 public class Tarea {
+    @Id
     private int id;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date fechainicio;
     private String estado, nombre, descripcion;
     private String ubicacion;
     private String listaHabilidades;
-    private String emergencia;
+    private int emergencia;
 
     public int getId(){
         return id;
@@ -25,12 +27,12 @@ public class Tarea {
         this.id = id;
     }
 
-    public String getIdEmergencia()
+    public int getIdEmergencia()
     {
         return emergencia;
     }
 
-    public void setIdEmergencia(String emergencia)
+    public void setIdEmergencia(int emergencia)
     {
         this.emergencia = emergencia;
     }
